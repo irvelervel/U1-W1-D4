@@ -10,6 +10,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <style>
+      i {
+        font-size: 1.5em;
+        color: red;
+      }
+
+      #running-icon {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -17,7 +27,7 @@
       <ul>
         <!-- 2) -->
         <li><i class="fas fa-house-user"></i> Vai a Home</li>
-        <li><i class="fas fa-walking"></i> Vai a Running</li>
+        <li><i class="fas fa-walking" id="running-icon"></i> Vai a Running</li>
         <li><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
     </div>
