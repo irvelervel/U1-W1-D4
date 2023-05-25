@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background images example</title>
+    <link rel="stylesheet" href="assets/reset.css" />
+    <style>
+      /* IMMAGINE PIÙ LARGA DEL CONTAINER */
+      #img-box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid gray;
+        background-image: url(https://placedog.net/500/500);
+        background-position: 100% 50%; /* tutto a dx, 50% di altezza */
+        /* background-size: contain; */ /* fa un resize dell'immagine per riempire perfettamente il contenitore */
+        /* background-attachment: fixed; */
+        /* proprietà che in caso di scroll applica il classico effetto di "parallasse" */
+        color: red;
+        font-size: 2em;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      #img-box:hover {
+        transform: scale(1.1);
+      }
+
+      /* CONTAINER PIÙ LARGO DELL'IMMAGINE */
+      #img-box-2 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid gray;
+        background-image: url(assets/img/dog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #box-gradient {
+        width: 300px;
+        height: 300px;
+        /* background-image: linear-gradient(-30deg, red, green); */ /* ES. BASE */
+        background: rgb(
+          126,
+          255,
+          74
+        ); /* FALLBACK, NEL CASO IL BROWSER NON SUPPORTI I GRADIENTS*/
+        background: linear-gradient(
+          90deg,
+          rgba(126, 255, 74, 1) 0%,
+          rgba(238, 62, 228, 1) 47%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      #box-text {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        overflow-x: hidden; /* nasconde la scrollbar orizzontale */
+        overflow-y: auto; /* fa comparire la scrollbar verticale se serve */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- immagine con ancora a epicode.com -->
+      <a href="https://www.epicode.com" target="_blank" rel="noopener">
+        <div id="img-box">EPICODE!</div>
+      </a>
+      <div id="img-box-2"></div>
+    </div>
+    <img src="https://placekitten.com/500" title="miao" />
+    <!-- grazie Giuseppe! proprietà "title" va apparire il contenuto in sovraimpressione -->
+    <div id="box-text">
+      Lorem ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis Lorem
+      ipsum dolor sit amet consectetur adipis Lorem ipsum dolor sit amet
+      consectetur adipis Lorem ipsum dolor sit amet consectetur adipis
+    </div>
+    <div id="box-gradient"></div>
+  </body>
+</html>

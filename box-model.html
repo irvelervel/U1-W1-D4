@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOX MODEL</title>
+    <!-- foglio di reset importato sempre prima di tutto! -->
+    <link rel="stylesheet" href="assets/reset.css" />
+    <!-- ...ora possiamo applicare i nostri stili, ricordandoci che partiamo da una base completamente azzerata -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      .box {
+        /* width e height NON FUNZIONANO su elementi di tipo inline */
+        /* width e height determinano la content-area dell'elemento */
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 40px;
+      }
+
+      img {
+        /* width: 100%;
+        max-width: 500px;
+        min-width: 250px; */
+        width: 300px;
+        height: 200px;
+      }
+
+      .rectangle {
+        width: 500px;
+        height: 200px;
+        background-color: orange;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TITOLONE GIGANTE!</h1>
+    <div class="container">
+      <div class="box">EPICODE</div>
+      <div class="box">EPICODE</div>
+      <div class="rectangle"></div>
+      <img src="https://placekitten.com/500" />
+      <ul>
+        <li>uno</li>
+        <li>due</li>
+        <li>tre</li>
+      </ul>
+    </div>
+  </body>
+</html>
